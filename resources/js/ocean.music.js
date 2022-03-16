@@ -3,9 +3,9 @@
  * @since 2022-03-12
  */
 
-if(typeof global !== "undefined") require("../../ocean/lib/ocean.helper")
-if(typeof global !== "undefined") require("../../ocean/lib/ocean.item")
-if(typeof global !== "undefined") require("../../ocean/lib/ocean.store")
+if(typeof global !== "undefined") require("../../../ocean/lib/ocean.helper")
+if(typeof global !== "undefined") require("../../../ocean/lib/ocean.item")
+if(typeof global !== "undefined") require("../../../ocean/lib/ocean.store")
 
 if(typeof Item === "undefined") helper.exception("library ocean.item is required")
 if(typeof Store === "undefined") helper.exception("library ocean.store is required")
