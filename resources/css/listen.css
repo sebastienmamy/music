@@ -1,0 +1,456 @@
+ @font-face {  font-family: 'Lato';          font-style: normal;  font-weight: 100;  src: url('../../../vendors/fonts/lato-100.ttf')            format('truetype'); }
+ @font-face {  font-family: 'Lato';          font-style: italic;  font-weight: 300;  src: url('../../../vendors/fonts/lato-300-italic.ttf')     format('truetype'); }
+ @font-face {  font-family: 'Lato';          font-style: normal;  font-weight: 300;  src: url('../../../vendors/fonts/lato-300.ttf')            format('truetype'); }
+ @font-face {  font-family: 'Lato';          font-style: normal;  font-weight: 400;  src: url('../../../vendors/fonts/lato-400.ttf')            format('truetype'); }
+ @font-face {  font-family: 'Lato';          font-style: normal;  font-weight: 700;  src: url('../../../vendors/fonts/lato-700.ttf')            format('truetype'); }
+ @font-face {  font-family: 'MaterialIcons'; font-style: normal;  font-weight: 400;  src: url('../../../vendors/fonts/material-icons.woff2')    format('woff2');}
+ @font-face {  font-family: 'Montserrat';    font-style: normal;  font-weight: 100;  src: url('../../../vendors/fonts/montserrat-100.ttf')      format('truetype');}
+ @font-face {  font-family: 'Montserrat';    font-style: normal;  font-weight: 300;  src: url('../../../vendors/fonts/montserrat-300.ttf')      format('truetype');}
+ @font-face {  font-family: 'Montserrat';    font-style: normal;  font-weight: 400;  src: url('../../../vendors/fonts/montserrat-400.ttf')      format('truetype');}
+ @font-face {  font-family: 'Montserrat';    font-style: normal;  font-weight: 500;  src: url('../../../vendors/fonts/montserrat-500.ttf')      format('truetype');}
+ @font-face {  font-family: 'Montserrat';    font-style: normal;  font-weight: 600;  src: url('../../../vendors/fonts/montserrat-600.ttf')      format('truetype');}
+ @font-face {  font-family: 'Nanum';         font-style: normal;  font-weight: 400;  src: url('../../../vendors/fonts/nanum-100.ttf')           format('truetype');}
+ @font-face {  font-family: 'Nothing';       font-style: normal;  font-weight: 400;  src: url('../../../vendors/fonts/nothing-400.ttf')         format('truetype');}
+ @font-face {  font-family: 'OpenSans';      font-style: normal;  font-weight: 300;  src: url('../../../vendors/fonts/opensans-300.ttf')        format('truetype');}
+ @font-face {  font-family: 'OpenSans';      font-style: italic;  font-weight: 400;  src: url('../../../vendors/fonts/opensans-400-italic.ttf') format('truetype');}
+ @font-face {  font-family: 'OpenSans';      font-style: normal;  font-weight: 400;  src: url('../../../vendors/fonts/opensans-400.ttf')        format('truetype');}
+ @font-face {  font-family: 'OpenSans';      font-style: normal;  font-weight: 600;  src: url('../../../vendors/fonts/opensans-600.ttf')        format('truetype');}
+ @font-face {  font-family: 'Playfair';      font-style: normal;  font-weight: 400;  src: url('../../../vendors/fonts/playfair-400.ttf')        format('truetype');}
+ @font-face {  font-family: 'Playfair';      font-style: normal;  font-weight: 700;  src: url('../../../vendors/fonts/playfair-700.ttf')        format('truetype');}
+ @font-face {  font-family: 'Roboto';        font-style: normal;  font-weight: 100;  src: url('../../../vendors/fonts/roboto-100.ttf')          format('truetype');}
+ @font-face {  font-family: 'Roboto';        font-style: normal;  font-weight: 300;  src: url('../../../vendors/fonts/roboto-300.ttf')          format('truetype');}
+ @font-face {  font-family: 'Roboto';        font-style: normal;  font-weight: 400;  src: url('../../../vendors/fonts/roboto-400.ttf')          format('truetype');}
+ @font-face {  font-family: 'Roboto';        font-style: normal;  font-weight: 700;  src: url('../../../vendors/fonts/roboto-700.ttf')          format('truetype');}
+
+
+/** verified css 2021-12-09 */
+
+*:root {
+    --dark-bg: #9c401c;
+    --dark-fg: #ffffff;
+} 
+
+#body { 
+    margin:0;
+    color: black;
+    overflow-x: hidden;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+}
+
+#header {
+    position: fixed;
+    width: 100vw;
+    height: 6vw;
+    left: 0;
+    top:0;
+    z-index: 1;
+    background: var(--dark-bg);
+    color: var(--dark-fg);
+}
+
+
+/** color classes **/
+/** ------------- **/
+
+*:root 
+ {
+    --font-small:               1vw;
+    --font-size:                1.4vw;
+    --font-large:               2vw;
+    --a-color-dark:             #9C401c;
+    --a-color-medium:           #B5512F;
+    --a-color-light:            #C0715A;
+    --b-color-dark:             #D0B362;
+    --b-color-medium:           #E8DAB2;
+    --b-color-light:            #F6F0E0;
+    --c-color-dark:             #384D56;
+    --c-color-medium:           #4F6D7A;
+    --c-color-light:            #9CB4BF;
+    --d-color-dark:             #85B0C1;
+    --d-color-medium:           #C0D6DF;
+    --d-color-light:            #F1F6F8;
+    --e-color-dark:             #CCCCCC;
+    --e-color-medium:           #EAEAEA;
+    --e-color-light:            #FFFFFF;
+    --header-height:            6vh;
+    --header-font-size:         3vh;
+    --header-font-weight:       100;
+    --small-border-radius:      0.3vw;
+    --regular-border-radius:    0.5vw;
+} 
+
+.dark-a             { background: var(--a-color-dark);      color: white; }
+.color-a            { background: var(--a-color-medium); }
+.light-a            { background: var(--a-color-light);  }
+.hover-a:hover      { background: var(--a-color-light);  }
+
+ .dark-b            { background: var(--b-color-dark);   }
+.color-b            { background: var(--b-color-medium); }
+.light-b            { background: var(--b-color-light);  }
+.hover-b:hover      { background: var(--b-color-light);  }
+
+ .dark-c            { background: var(--c-color-dark);      color: white; }
+.color-c            { background: var(--c-color-medium); }
+.light-c            { background: var(--c-color-light);  }
+.hover-c:hover      { background: var(--c-color-light);  }
+
+ .dark-d            { background: var(--d-color-dark);   }
+.color-d            { background: var(--d-color-medium); }
+.light-d            { background: var(--d-color-light);  }
+.hover-d:hover      { background: var(--d-color-light);  }
+
+ .dark-e            { background: var(--e-color-dark);   }
+.color-e            { background: var(--e-color-medium); }
+.light-e            { background: var(--e-color-light);  }
+.hover-e:hover      { background: var(--e-color-light);  }
+
+.light-font, .light-font::before { color:white;}
+
+
+/** position classes **/
+/** ---------------- **/
+
+.fixed          {position: fixed; }
+
+.absolute       {position: absolute; }
+
+.relative       {position: fixed; }
+
+.cell           {display: table-cell;}
+
+.block          {display: inline-block;}
+
+.top            {text-align:center; vertical-align:top;}
+.center         {text-align:center; vertical-align:middle;}
+.bottom         {text-align:center; vertical-align:bottom;}
+.top-left       {text-align:left;   vertical-align:top;}
+.left           {text-align:left;   vertical-align:middle;}
+.bottom-left    {text-align:left;   vertical-align:bottom;}
+.top-right      {text-align:right;  vertical-align:top;}
+.right          {text-align:right;  vertical-align:middle;}
+.bottom-right   {text-align:right;  vertical-align:bottom;}
+
+
+
+/** font classes **/
+/** ---------------- **/
+
+.roboto     { font-family: Roboto; }
+.lato       { font-family: Lato; }
+.open       { font-family: OpenSans; }
+.montserrat { font-family: montserrat; }
+
+
+.small100,  .font100,   .large100               {font-weight: 100; }
+.small300,  .font300,   .large300               {font-weight: 300; }
+.small400,  .font400,   .large400               {font-weight: 400; }
+.small700,  .font700,   .large700               {font-weight: 700; }
+
+.small100,  .small300,  .small400,  .small700   {font-size: var(--font-small);}
+.font100,   .font300,   .font400,   .font700    {font-size: var(--font-size);}
+.large100,  .large300,  .large400,  .large700   {font-size: var(--font-large);}
+
+/** size classes **/
+/** ------------ **/
+
+.ellips     { overflow: hidden; text-overflow: ellipsis;}
+
+.nowrap     { white-space: nowrap;}
+
+.w100                                                       { width:  100vw;    } 
+.w50                                                        { width:   50vw;    }
+.w33                                                        { width:   33vw;    }
+.w34                                                        { width:   34vw;    }
+.w3,    header-box                                          { width:    3vw;    }
+.w9,    input[type="file"]                                  { width:    9vw;    }
+.w90,   info-text-box                                       { width:   90vw;    }
+.w100p, input[type="file"]::before                          { width:  100%;     }
+.w90p,  field span                                          { width:   90%;     }
+
+
+.h100                                                { height: 100vh;    }
+.h6w,   #message                                   { height:   6vw;    } 
+.h3w,   header-box, control-box, info-text-box    { height:   3vw;    } 
+
+
+
+/** skin classes **/
+/** ------------ **/
+
+
+
+.radius-small {border-radius: var(--small-border-radius);}
+
+
+/** event / action classes **/
+/** ---------------------- **/
+
+.clickable       { filter:brightness(0.9);cursor: pointer;}
+.clickable:hover { filter:brightness(1);}
+.legend          {background-color: rgba(255,255,255,0);    color: rgba(0,0,0,0);}
+.legend:hover    {background-color: rgba(255,255,255,0.85);  color: rgba(0,0,0,0.85);}
+
+.hover-a, .hover-b, .hover-c, .hover-d, .hover-e, .legend ,.clickable { transition: all 0.2s ease-in-out; }
+
+
+/** vue.js styles for transition tag **/
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .2s
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0
+}
+
+
+
+
+
+a {
+    color:      black;
+    text-decoration: none;
+}
+
+a:hover, a:visited {
+    color:      var(--a-color-dark);
+
+}
+      
+
+  
+
+#message 
+{
+    left: 0;
+    bottom:0;
+	color:              var(--header-color);
+    z-index: 2;
+    text-align: center;
+    line-height: 6vw;
+    vertical-align: middle;
+    display: inline-box;
+}
+
+
+
+
+.error 
+{
+    background-color: #c99d9d !important;
+}
+
+.progress
+{
+    background-color: #9090E0 !important;
+}
+
+.success
+{
+    background-color: #90E090 !important;
+}
+
+
+
+header-box
+{
+    top:1.5vw;       
+    border-radius: var(--small-border-radius); 
+    cursor: pointer;    
+}
+
+header-box span {
+    margin-top: 0.6vw;display: inline-block;
+    font-size:1.8vw;text-transform: uppercase;
+}
+
+
+
+
+
+control-box 
+{
+    cursor:pointer;
+    border-radius: var(--small-border-radius);
+    top:7.5vw;
+}
+
+control-box span 
+{
+    font-family: Lato;
+    font-weight: 100;
+    font-size: 1.8vw;
+    position: relative;
+    top: -0.4vw;
+}
+
+control-box icon 
+{
+    margin-left: 0;
+}
+
+
+
+
+
+icon 
+{
+	font-family:                    'MaterialIcons';
+    font-size:                      2.2vw;
+    margin-top:                     0.4vw;
+    margin-left:                    0.4vw;
+    display:                        inline-block;
+    -webkit-font-feature-settings:  'liga';
+    font-feature-settings:          'liga';
+    -webkit-font-smoothing:         antialiased;
+}
+
+
+
+
+
+input[type="file"]
+{
+    border:             1px dashed rgba(255,255,255,0.3);
+    border-radius:      var(--small-border-radius);
+    vertical-align:     middle;
+    font-size:          2vh;
+    background:         rgba(255,255,255,0);
+    color:              transparent;
+    margin-right:       0vw;
+    padding:            0vh 0vw;
+
+}
+
+
+
+input[type="file"]#libr::before {
+    content: 'drop library';
+}
+
+input[type="file"]#mp3i::before {
+    content: 'drop medias';
+}
+
+input[type="file"]::before 
+{
+    font-family:    Roboto;
+    display:        inline-block;
+    outline:        none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor:         pointer;
+    font-size:      1.5vw;
+    margin-top:     0.5vw;
+    text-align:     center;
+    font-weight:    100;
+}
+
+input[type="file"]:active, input[type="file"]:focus
+{
+    outline: 0;
+}
+
+input[type="file"]:active, input[type="file"]:visited  
+{
+    background:       var(--a-color-light);
+}
+
+input[type="file"], input[type="file"]::before      { height:   2.85vw;    } 
+
+
+
+
+info-text-box 
+{
+    border-radius: var(--small-border-radius);
+    text-align: center;
+    top:12vw;
+    left:5vw;
+    font-family: Lato;
+    font-weight: 100;
+    font-size: 2vw;
+    padding-top: 0.5vw;
+}
+
+field 
+{
+    white-space: nowrap;
+    text-align:left;
+    position: fixed;
+    top:11.8vw;
+}
+
+field icon 
+{
+    margin-top: 0.8vw;
+}
+
+
+
+
+field span 
+{
+    top: 0.7vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+}
+
+
+.search-box {
+    display: inline-block;
+    position: fixed;
+    top:1.5vw;
+    left:37vw;
+    width:33.5vw;
+    height:3vw;
+    background:rgba(255,255,255,0.15);
+    border-radius: var(--small-border-radius);
+    transition: all 0.075s ease-in-out;
+    cursor: text;
+    vertical-align: middle;
+    line-height: 3vw;
+    padding: 0 0.5vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family:    Roboto;
+    outline:        none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    font-weight:100;
+    font-size:      1.5vw;
+}
+
+
+.search-box:hover, .search-box:active {
+    background:rgba(255,255,255,0.3);
+}
+
+#input-search {
+    background: none;
+    border: none;
+    width: 23.5vw;
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 1.5vw;
+    color: white; 
+}
+
+
+#input-search::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+#input-search:focus{
+    outline: none;
+}
