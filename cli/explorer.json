@@ -1,0 +1,10 @@
+{
+    "directories" : {
+        "sound":   "/Volumes/Mobile/University/Ocean Media/Music",
+        "image": "/Volumes/Mobile/University/Ocean Media/Image"
+    },
+    "files": {
+        "output": "/Volumes/Mobile/Services/Projects/music/data/ocean.music.json"
+    }
+}
+
